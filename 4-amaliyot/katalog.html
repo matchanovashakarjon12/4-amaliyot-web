@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog — MoliyaYo‘l</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="sarlavha">
+    <a class="logo" href="index.html">MoliyaviyYo‘l</a>
+    <button id="menyu-tugma" class="ikon-tugma" type="button" aria-label="Menyu" aria-expanded="false">☰</button>
+    <nav id="menyu">
+      <a href="index.html">Bosh sahifa</a>
+      <a href="katalog.html">Katalog</a>
+      <a href="aloqa.html">Aloqa</a>
+      <button id="tema-tugma" class="ikon-tugma" type="button" aria-label="Tungi rejim">🌓</button>
+    </nav>
+  </header>
+  <main class="konteyner-asosiy">
+    <h1>Jamg‘arma va investitsiya katalogi</h1>
+
+    <section class="statistika">
+      <div><span>Jami</span><strong id="st-jami"></strong></div>
+      <div><span>O‘rtacha minimal summa</span><strong id="st-ortacha"></strong></div>
+      <div><span>Eng qimmat</span><strong id="st-qimmat"></strong></div>
+    </section>
+
+    <section class="boshqaruv">
+      <input id="qidiruv" type="search" placeholder="Nomi bo‘yicha qidirish...">
+      <select id="kategoriya"><option value="hammasi">Barcha kategoriyalar</option></select>
+      <select id="saralash">
+        <option value="id">Saralashsiz</option>
+        <option value="narx-osish">Narx: o‘sish bo‘yicha</option>
+        <option value="narx-kamayish">Narx: kamayish bo‘yicha</option>
+        <option value="nom">Nomi: alifbo bo‘yicha</option>
+      </select>
+    </section>
+
+    <p>Ko‘rsatilmoqda: <strong id="soni">0</strong> ta</p>
+    <p id="bosh-xabar" hidden>Hech narsa topilmadi</p>
+    <section id="konteyner" class="kartalar"></section>
+  </main>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-ichki" role="dialog" aria-modal="true">
+      <button id="modal-yopish" class="ikon-tugma" type="button" aria-label="Yopish">×</button>
+      <h2 id="modal-nomi"></h2>
+      <p id="modal-tavsif"></p>
+      <p id="modal-kategoriya"></p>
+      <p id="modal-narx"></p>
+      <p id="modal-daromad"></p>
+      <p id="modal-holat"></p>
+      <div id="modal-teglar"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/katalog.js"></script>
+</body>
+</html>
